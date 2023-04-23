@@ -1,0 +1,14 @@
+---
+- name: installing mariadb
+  hosts: db
+  vars_files:
+    - myapp1-vars.yaml
+  roles:
+    - db
+
+- name: installing wordpress
+  hosts: app
+  vars_files:
+    - myapp1-vars.yaml
+  roles:
+    - app
